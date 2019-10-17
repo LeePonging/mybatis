@@ -32,10 +32,4 @@ public class SomeController {
         System.out.println(name);
         return student;
     }
-
-    @GetMapping("/xx")
-    public String  getxxHandle() {
-        System.out.println("xx");
-        return "success";
-    }
 }
