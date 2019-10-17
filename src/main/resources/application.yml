@@ -1,0 +1,24 @@
+server:
+  port: 8888
+
+# 注册mybatis
+mybatis:
+  type-aliases-package: com.abc.bean   # 别名
+  mapper-locations: classpath:com\abc\dao\*.xml  # 映射文件目录
+
+# 注册数据源
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource  # 数据源类型
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///test?useUnicode=true&characterEncoding=utf8
+    username: root
+    password: Max.diao98846993
+
+# 日志输出到控制台的格式
+logging:
+  pattern:
+    console: level-%level-%msg%n
+  level:
+    root: warn   # 配置应用启动日志级别
+    com.abc.dao: debug   # 配置com.abc.dao包下的运行日志级别
